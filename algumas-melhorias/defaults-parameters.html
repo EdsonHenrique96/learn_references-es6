@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>02 - Defaults parameters</title>
+    </head>
+    <body>
+
+        <script>
+            
+            const firstName = 'Edson';
+            const surName = 'Batista';
+
+            // ES5
+            function nameComplete(firstName, surName) {
+                firstName = firstName || 'First Name default';
+                surName =  surName || 'Sur Name default';
+
+                return `<p>${firstName} ${surName}</p>`;
+            }
+
+            //ES6
+            function nameComplete2(firstName = 'First Name Default', surName = 'Sur Name Default') {
+                firstName = firstName;
+                surName = surName;
+
+                return `<p>${firstName} ${surName}</p>`;
+            }
+
+             document.write(nameComplete());
+             document.write(nameComplete(firstName, surName));
+             document.write(nameComplete2());
+             document.write(nameComplete2(firstName, surName));   
+
+        </script>
+
+    </body>
+</html>
