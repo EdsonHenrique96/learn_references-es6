@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>04 - Array.find e Array.findIndex</title>
+</head>
+<body>
+    
+    <script>        
+        const data = [
+            {
+                nome: 'Edson',
+                age: 21,
+                city: 'Ferraz'
+            },
+            {
+                nome: 'Pedro',
+                age: 52,
+                city: 'São paulo'
+            }
+        ];
+        
+        const sampleArray = [4, -5, -1];
+
+        const underZero = sampleArray.find(x => x < 0);
+        //find retorna o primeiro número que atende sua condição.
+        console.log(underZero);
+            
+        const underZeroIndex = sampleArray.findIndex(x => x < 0);
+        //findIndex retorna o indice onde o elemento foi encontrado.
+        console.log(underZeroIndex);
+
+        //Também pode ser usado para interar sobre arrays mais complexos.
+        console.log(sampleArray.find(value => value < 0));
+    </script>
+
+</body>
+</html>

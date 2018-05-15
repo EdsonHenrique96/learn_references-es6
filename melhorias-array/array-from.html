@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array.from()</title>
+</head>
+<body>
+    
+    <ul id="list">
+        <li>Edson</li>
+        <li>Henrique</li>
+        <li>Felix</li>
+    </ul>
+
+    <script>
+
+        /*No primeiro momento o list é um nodeList,
+        o método from() converte em prototype de array.*/
+
+        const list = document.querySelectorAll('#list li');
+        console.log(list);
+        const listArray = Array.from(list);
+        console.log(listArray);
+
+        const names = listArray.map((name) => name.textContent);
+
+        console.log(names);
+
+    </script>
+
+</body>
+</html>
