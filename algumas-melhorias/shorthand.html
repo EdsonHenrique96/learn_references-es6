@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>01 - shorthand</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <p id="text1"></p>
+        <p id="text2"></p>
+
+        <script>
+            // Básicamente, o shorthand é uma abreviação de notação de objeto
+
+            const name = 'Henrique';
+            const age = 21;
+            const city = 'Ferraz de vasconcelos';
+            
+            // Notaçao comun 
+            const notShorthand = {
+                name: name,
+                age: age,
+                city: city,
+
+                render: function() {
+                    return `My name is ${this.name}, have ${this.age} years
+                     and I live in ${this.city}`
+                }
+
+            }
+            
+            // Notação com shorthand
+            const shorthand = {
+                name,
+                age,
+                city,
+
+                render() {
+                    return `My name is ${this.name}, have ${this.age} years
+                    and I live in ${this.city}`
+                }
+            }
+
+            const text1 = document.querySelector('#text1');
+            const text2 = document.querySelector('#text2');
+
+            text1.innerHTML = notShorthand.render();
+            text2.innerHTML = shorthand.render();
+
+
+        </script>
+
+    </body>
+</html>

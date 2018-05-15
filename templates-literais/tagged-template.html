@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tagged Template</title>
+        <meta charset='utf-8'>
+        <style>
+
+            .green {
+                color: green;
+                font-size: 25px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <script>
+            
+            const city = 'Dublin';
+            const something = 'Guinness';
+            const otherThing = 'Leprechaums';
+
+            function green(template, ...values) {
+                return template.reduce((accumulator, element, i) => {
+                    return `
+                    ${accumulator}
+                    <span class='green'>${values[i-1].toUpperCase()}</span>
+                    ${element}
+                    `
+                });
+            }
+
+            const ireland = green`I live in ${city} the city de ${something} and ${otherThing} !`;
+
+            document.body.innerHTML = ireland;
+
+        </script>
+    </body>
+</html>
