@@ -1,5 +1,4 @@
 //Ultilizado para desmembrar qualquer elemento que seja interavel.
-
 let front = ['react', 'vue', 'angular'];
 let back = ['python', 'ruby', 'nodejs'];
 
