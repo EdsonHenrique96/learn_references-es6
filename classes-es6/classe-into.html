@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classes ES6</title>
+</head>
+<body>
+    <script>
+        class Cliente {
+        
+            constructor(nome, idade){
+                this.nome = nome;
+                this.idade = idade;
+            }
+
+            aniversario() {
+                this.idade ++; 
+            }
+            
+            // metodo amarrado a classe, ex Cliente.qtdCliente()
+            static qtdCliente() {
+                return this.count;
+            }
+
+            // são acessado como atributos , ex : cliente.nome;
+            get name() {
+                console.log(`My name is ${this.nome}`);
+            }
+            
+            // ex : cliente.nickname = "value";
+            set nickname(nick) {
+                this.nick = nick;
+            }
+
+        }
+
+        let cliente = new Cliente('Edson', 21);
+        let cliente1 = new Cliente('Pedro', 60);
+        let cliente2 = new Cliente('Eudes', 40);
+
+    </script>
+</body>
+</html>
