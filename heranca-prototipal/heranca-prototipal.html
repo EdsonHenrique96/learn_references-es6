@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Herança prototipal</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+        <script>
+            function animal(kind, sound) {
+                this.kind = kind;
+                this.sound = sound;
+            }
+
+            animal.prototype.hello = function() {
+                console.log(`My ${this.kind} does ${this.sound}`);
+            }
+
+            let dog = new animal('dog', 'auau');
+        </script>
+    </body>
+</html>
