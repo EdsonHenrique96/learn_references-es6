@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //forma de você definir comportamentos diferentes para metodos dentro de uma objeto.
+        //se comporta como uma especie de middleware
+        let obj = {
+            name: 'Edson',
+            age: 21
+        }
+
+        let proxy = new Proxy(obj, {
+            get(target, name) {
+                console.log('Alguém está pedindo o nome =D');
+                return target[name];// outra forma de acessar um objeto, pode ser feito target.name sem problemas
+            },
+            set(target, name, value){
+                console.log('Alguém está mudando o nome!');
+                target[name] = value;
+            }
+        });
+
+    </script>
+</body>
+</html>
