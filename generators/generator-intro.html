@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Generator é um tipo de iterator, o * apos a palavra function que define um generator. 
+        //yield é o retorno d função generator.
+        function* genNames() {
+            yield 'Edson';
+            yield 'Pedro';
+            yield 'Fabio';
+        }
+        
+        const names = genNames();
+
+        console.log(names.next());
+        console.log(names.next());
+        console.log(names.next());
+    </script>
+</body>
+</html>
