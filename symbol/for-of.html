@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for...of</title>
+</head>
+<body>
+    <script>
+        //iterators =  elementos que eu consigo fazer para iterar
+        //iterable = elementos que eu posso iterar
+
+        //protocolos que permite que a gente possa interar sobre alguma informação.
+        
+        let text = 'Ireland'; //iterable
+        let  it = text[Symbol.iterator](); // iterator
+
+        console.log(it.next());
+        console.log(it.next());
+        console.log(it.next());
+        console.log(it.next());
+        console.log(it.next());
+        console.log(it.next());
+        console.log(it.next());
+        console.log(it.next());
+
+        for(letter of text){
+            console.log(letter)
+            if(letter === 'a') break;
+        }
+        
+    </script>
+</body>
+</html>

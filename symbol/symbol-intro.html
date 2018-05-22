@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Symbol intro</title>
+</head>
+<body>
+    <script>
+        /* Symbol é um tipo de dados "UNICO" e "IMUTAVEL" e pode ser usado como
+        um identificador para a propriedade de objetos. */
+        let foo = Symbol('name');
+        let bar = Symbol('name');
+        
+        //mesmo possuindo a mesma descrição o resultado dessa expressão é false.
+        console.log(foo == bar);
+
+        let obj = {
+            name: 'Edson',
+            [Symbol('age')]: 21,
+            [Symbol('city')]: 'São paulo'
+        }
+        
+        // os symbol não são mostrados como chaves "atributos".
+        console.log(Object.keys(obj))
+
+        console.log(Object.getOwnPropertySymbols(obj))
+    </script>
+</body>
+</html>
